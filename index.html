@@ -29,13 +29,14 @@
                 <li class="list-group-item fw-light fst-italic">Ask user for the total book price and the number of
                   books.</li>
                 <li class="list-group-item fw-light fst-italic">Compute the tax (7.5 percent of the total book price).
+                  TAX is a const.
                 </li>
-                <li class="list-group-item fw-light fst-italic">Compute the shipping charge ($2 per book).</li>
+                <li class="list-group-item fw-light fst-italic">Compute the shipping charge ($2 per book). SHIPPING is a
+                  const</li>
                 <li class="list-group-item fw-light fst-italic">The price of the order is the sum of the total book
                   price, the tax, and the
                   shipping charge.</li>
                 <li class="list-group-item fw-light fst-italic">Print the price of the order.</li>
-                <li class="list-group-item fw-light fst-italic">Translate this pseudocode in the script.js file</li>
               </ul>
             </div>
           </div>
@@ -53,15 +54,23 @@
             <div class="card">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item fw-bold">
-                  Please enter the number of books:
-                  <input type="number" id="total-num-of-books" />
+                  <div class="mb-2">Please enter the number of books: <input type="number" id="num-of-books" />
+                  </div>
+                  <div class="mb-2">Please enter the price of the books: <input type="number" id="price-of-books" />
+                  </div>
+                  <div><button id="calculate">Calculate</button></div>
                 </li>
                 <li class="list-group-item fw-bold">
-                  Please enter the price of the books:
-                  <input type="number" id="price-of-books" />
+                  Subtotal: $<span id='subtotal'>0.00</span>
                 </li>
-                <li class="list-group-item fw-bold" id="welcome-fun">
-                  <p>Your Total: <span id='total'> $0.00</span></p>
+                <li class="list-group-item fw-bold">
+                  Tax: $<span id='tax'>0.00</span>
+                </li>
+                <li class="list-group-item fw-bold">
+                  Shipping Charge: $<span id='shipping-charge'>0.00</span>
+                </li>
+                <li class="list-group-item fw-bold">
+                  Total: $<span id='final-total'>0.00</span>
                 </li>
               </ul>
             </div>
